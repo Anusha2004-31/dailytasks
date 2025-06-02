@@ -1,0 +1,26 @@
+body {
+    margin:0;
+    padding:0;
+    background-position:relative;
+}
+ .container {
+    height:100vh;
+    width:100vw;
+    background-color: blue;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkJuhs3xtJ0V94n2PYF04yJ7JqFJ3Co7odWQ&s);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:relative;
+    background-attachment: fixed;
+    background-clip: padding-box;
+ }
+  .container h1{
+Position: absolute;
+Top:150px;
+ }
+  .container button{
+   position: absolute;
+   top:250px;
+   color:blue;
+ }
+ 
