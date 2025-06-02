@@ -1,0 +1,107 @@
+.circle-image {
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    object-fit: cover;
+    float:right;
+}
+.container button {
+    position:absolute;
+    background-color: black;
+    color:azure;
+}
+.nav-list {
+    text-align: right;
+    list-style: none;
+    margin-top:-40px;
+    display:flex ;
+    justify-content:flex-end;
+}
+.nav-list li {
+    display: inline;
+    margin-left:15px; 
+    font-weight:normal ;
+}
+.paiki{
+    position: relative;
+    bottom: 100px;
+}
+.sw, .dw {
+    border: 2px solid gainsboro;
+    padding-left: 10px;
+    margin:30px;
+    width:80vw;
+    border-radius: 10px;
+}
+p {
+    font-size:10px;
+    line-height:1.6;
+    color:black;
+}
+.header {
+     display: flex;
+}
+.images img{
+    height: 100px;
+    width:100px;
+    border-radius:50%;
+    justify-content: space-between;
+}
+    .image1{
+        position:relative;
+        top:150px;
+        padding-left:100px;
+        gap: 10px;
+    }
+    .image2{
+    position: relative;
+    padding-left:440px ;
+    top:50px;
+    }
+.header1 {
+    border: 1px solid blue;
+    padding-top:30px;
+    background-color:beige;
+    border-radius:5px ;
+    margin:10px;
+    animation-name:move ;
+    animation-duration: 2s;
+    animation-delay:1s ;
+    animation-direction: forward;
+    animation-timing-function:ease-in;
+}
+@keyframes move{
+    from{
+        transform:translateY(-100PX) ;
+    }
+    TO{
+        transform:translateY(0);
+    }
+    
+}
+.header2 {
+    border: 1px solid brown ;
+    padding-top :30px;
+    background-color:beige;
+    margin:10px;
+    border-radius:5px;
+    animation-name:move ;
+    animation-duration: 2s;
+    animation-delay:1s ;
+    animation-direction: forward;
+    animation-timing-function:ease-in;
+}
+@keyframes move{
+    from{
+        transform:translateY(-100PX) ;
+    }
+    TO{
+        transform:translateY(0);
+    }
+
+
+}
+.details{
+    position:relative;
+    bottom:50px;
+}
