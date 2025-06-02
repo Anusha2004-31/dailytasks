@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: hsl(185, 89%, 38%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color:white;
+  width: 280px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.profile-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  background-color: cadetblue;
+}
+.paiki{
+  position: absolute;
+  bottom: 500px;
+}
+
+.profile-img img {
+  position: relative;
+  top: 20px;
+
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 20px;
+  color: #db0c0c;
+}
+
+p {
+  font-size: 14px;
+  color: #777777;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+.social-icons a img {
+  width: 25px;
+  margin: 0 5px;
+  transition: transform 0.3s;
+}
+
+.buttons button {
+  background-color: #af4ae2;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+.buttons button:hover {
+  background-color: #bd355e;
+}
