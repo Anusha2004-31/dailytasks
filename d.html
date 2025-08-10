@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: bisque;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>date of your birth</h1>
+    <label for="year">selectyear</label>
+    <select name="year" id="year"></select>
+    <select name="month" id="month"></select>
+    <select name="dates" id="dates"></select>
+</body>
+<script>
+    let year = "<option>---year---</option>";
+    for (let i = 2000; i <= 2026; i++) {
+        year += `<option value="${i}">${i}</option>`;
+    }
+    document.getElementById("year").innerHTML = year
+
+    let month = "<option>---month---</option>";
+    for (let i = 1; i <= 12; i++) {
+        month += `<option value="${i}">${i}</option>`;
+    }
+    document.getElementById("month").innerHTML = month;
+
+    let dates = "<option>--dates---</option>";
+    for (let i = 1; i <= 100; i++) {
+        dates += `<option value="${i}">${i}</option>`;
+    }
+    document.getElementById("dates").innerHTML = dates;
+
+
+    //     let years = "<option>---years</option>";
+    //     let i = 1990;
+
+    //     while (i <= 2040) {
+    //         years += `<option value="${i}">${i}</option>`;
+    //         i++;
+    //     }
+
+    //     document.getElementById("years").innerHTML = years;
+
+    //     let months = "<option>--months</option>";
+    //     let j = 1;
+    //     while (j <= 12) {
+    //         month += `<option value="${j}">${j}</option>`;
+    //         j++;
+    //     }
+    //     document.getElementById("months").innerHTML = months; -->
+
+    //     let dates = "<option>---dates---</option>";
+    //     let i = 6;
+    //     while (i <= 80) { // dates +=`<option value="${i}">${i}</option>`;
+    //         i++;
+    //         }
+    //         document.getElementById("dates").innerHTML = dates;
+
+
+    //         let dates = "<option>---dates---</option>";
+    //         let i = 9;
+    //         do {
+    //         dates += `<option value="${i}">${i}</option>`;
+    //         i++;
+    //         } while (i <= 98) {
+
+    //          let year="<option>---year---</option>" ;
+    //           let i=1000;
+    //           do {
+    //             year +=`<option value="${i}">${i}</option>`;
+    //              i++;
+    //          } while (i <= 2027) {  }  document.getElementById("year").innerHTML=year;
+    //          let month="<option>---month---</option>" ;
+    //          let i=1;
+    //          do { month +=`<option value="${i}">${i}
+    //                 </option>`;
+    //                  i++;
+    //                  } while (i <= 12) {
+
+    //                   }
+    //                    document.getElementById("month").innerHTML=month; 
+</script>
+</body>
+
+</html>
