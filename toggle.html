@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #toggle {
+        display: none;
+    }
+
+    .paly {
+        display: inline-block;
+        padding: 10px;
+        background-color: blanchedalmond;
+        border-radius: 20px;
+        display: flex-end;
+
+    }
+
+    .container {
+        background-color: white;
+        color: black;
+
+    }
+
+    #toggle:checked~.container {
+        background-color: brown;
+        color: blue;
+
+    }
+
+    .paly::after {
+        content: " OFF";
+    }
+
+    #toggle:checked+.paly::after {
+        content: " ON";
+    }
+</style>
+
+<body>
+    <input type="checkbox" id="toggle">
+    <label class="paly" for="toggle"></label>
+    <div class="container">
+        <h1>anusha</h1>
+    </div>
+
+</body>
+
+</html>
