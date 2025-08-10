@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="welcomemessage"></h2>
+    <h2 id="customername"></h2>
+    <h2 id="squreresult"></h2>
+    <h2 id="productdisplay"></h2>
+    <h2 id="greeting"></h2>
+    <h2 id="display"></h2>
+    <div id="totalbill">
+    </div>
+    <h2 id="dispaly"></h2>
+    <button onclick="menu('Burger', 100)">Burger</button>
+    <button onclick="menu('Pizza', 150)">Pizza</button>
+    <button onclick="menu('Sandwich', 80)">Sandwich</button>
+    <h2 id="default"></h2>
+    <h2 id=buttons></h2>
+    <button onclick="Quantity(1)">+</button>
+    <button onclick="Quantity(-1)">–</button>
+
+    <script>
+        //1. Display a Welcome Message:
+        // Create a function without parameters that displays a welcome message like “Welcome
+        // to Our Restaurant” inside an <h2> tag using innerText.
+        function welcomemessage() {
+            document.getElementById(" welcomemessage").innerText = "welcome to our restaurant";
+        }
+        welcomemessage();
+
+        //2. Show Customer Name on Click:
+        // Write a function that takes a customer name as a parameter and displays "Hello,
+        // [CustomerName]!" using innerHTML.
+        function customername(anusha) {
+            document.getElementById("customername").innerText = "hello!" + anusha;
+        }
+        customername("anusha");
+        // 3. Calculate Square of a Number:
+        // Create a function that accepts a number as a parameter and displays its square using
+        // innerText.
+        function square(number) {
+            let result = number * number;
+            document.getElementById("squreresult").innerText = "square:" + result;
+        }
+        square(10);
+
+        // 4. Display Product and Price (Default):
+        // Write a function that takes product name and price (with price as a default parameter
+        // = 100). Display both using innerHTML.
+        function fun(product, price = 100) {
+            document.getElementById("productdisplay").innerText = "Product: " + product + "Price:" + price;
+        }
+        fun("burger");
+        // 5. Create a Function to Greet with Default Name:
+        // Create a function that greets a user by name, and if no name is passed, defaults to
+        // "Guest"
+        function greet(name = "guest") {
+            document.getElementById("greeting").innerText = "hello" + name;
+        }
+        // 6. Dynamic Item Billing:
+        // Create a function that takes item name, quantity, and price per unit. Calculate and
+        // display the total bill dynamically inside a <div>.
+
+        function item(name, quality, price) {
+            document.getElementById("totalbill").innerText = `item:${name} item:${quality} item:${price}`;
+        }
+        item("pizza", "2", "200");
+
+        greet();
+
+        // 7. Multi-Button Dynamic Menu Generator:
+        // Create 3 buttons – each shows a different menu item and price using the same
+        // function with parameters
+        function menu(itemName, price) {
+            document.getElementById("display").innerText =
+                `Item:${itemName} Price: ${price}`;
+        }
+
+        // 8. Smart Discount Calculator with Defaults:
+        // Write a function that takes amount and an optional discountPercent (default = 10%).
+        // Display final amount after discount using innerText.
+        function cal(amount, discount = 10) {
+            let final = amount - (amount * discount / 100);
+            document.getElementById("default").innerText = `amount:${amount},discount:${discount}Final Amount:${final}`;
+        }
+        cal(10000);
+        // Interactive Quantity Updater with Live Total:
+        // Create "+" and "–" buttons to increase/decrease quantity of an item. Use a function
+        // with parameters to update and display the live total using innerHTML.
+        function fun(customername, itemname, quantity, price) {
+            document.getElementById("display").innerText = `customername${customername},itemname${itemname},quantity${quantity},price${price}`;
+        }
+        fun("anusha", "pizza", "3", "600");
+
+
+
+    </script>
+</body>
+
+</html>
