@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atm</title>
+</head>
+
+<body>
+    <script>
+        let correctpin = "5335";
+        let checkbalance = 8000;
+        let enterpin = prompt("Enter 4-digit ATM PIN");
+        if (correctpin === enterpin) {
+            alert("Login successful");
+            let choice;
+
+            do {
+                choice = prompt("Choose a choice:\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit");
+
+                if (choice === "1") {
+                    alert(`Your current balance is ${checkbalance}`);
+                }
+
+
+                else if (choice === "2") {
+                    let amount = Number(prompt("Enter amount to deposit:"));
+                    if (amount > 0) {
+                        checkbalance += amount;
+                        alert(`${amount} deposited.\nNew Balance: ${checkbalance}`);
+                    } else {
+                        alert("Invalid deposit amount");
+                    }
+                }
+
+                else if (choice === "3") {
+                    let amount = Number(prompt("Enter amount to withdraw:"));
+                    if (amount > 0) {
+                        if (amount <= checkbalance) {
+                            checkbalance -= amount;
+                            alert(`${amount} withdrawn.\nRemaining Balance: ${checkbalance}`);
+                        } else {
+                            alert("Insufficient balance");
+                        }
+                    } else {
+                        alert("Invalid withdraw amount");
+                    }
+                }
+
+                else if (choice === "4") {
+                    alert("Exit Thank you");
+                }
+
+                else {
+                    alert("Invalid choice Please enter 1 to 4");
+                }
+
+            } while (choice !== "4");
+
+        } else {
+            alert("Wrong PIN");
+        }
+
+    </script>
+</body>
+
+</html>
