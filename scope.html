@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: gray;
+            padding: 40px;
+        }
+
+        h2 {
+
+            font-weight: bold;
+        }
+
+        .form {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 30%;
+            padding: 12px 10px;
+            border: 2px solid blue;
+            border-radius: 5px;
+        }
+
+        label {
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            background-color: white;
+        }
+
+        input:focus+label,
+        input:not(:placeholder-shown)+label {
+            top: -10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+    <form>
+        <div class="form">
+            <input type="text" id="name" required placeholder=" ">
+            <label for="name">Name</label>
+        </div>
+        <div class="form">
+            <input type="email" id="email" required placeholder=" ">
+            <label for="email">Email</label><br><br>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+
+</html>
