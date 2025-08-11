@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 350px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form id="myform">
+            <label for="username">Name</label>
+            <input type="text" id="username"><br><br>
+            <label for="address">address</label>
+            <input type="text" id="address"><br><br>
+            <button type="submit">Submit</button>
+    </center>
+    </form>
+
+    <script>
+        let form = document.getElementById("myform");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            let username = document.getElementById('username').value;
+            let address = document.getElementById('address').value;
+            if (username === '' || address === '') {
+                alert('Username and address must be filled');
+            } else {
+                alert('Form submitted\nusername:' + username + '\naddress:' + address);
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
