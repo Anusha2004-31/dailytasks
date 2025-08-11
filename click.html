@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click</title>
+    <style>
+        p {
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="mypara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non temporibus aliquid expedita, quasi
+        itaque a eligendi architecto labore minus id ratione! Esse impedit est, modi optio expedita eaque sunt et.
+        Minima eveniet culpa enim. Nam doloribus aliquid, doloremque vero eveniet voluptates sapiente voluptas quod
+        labore beatae molestias illum distinctio voluptatibus, officia enim atque autem debitis impedit deleniti ipsam
+        quo suscipit.
+        Id, dolore molestias? Consequatur expedita nobis sed perspiciatis neque culpa quidem eius repudiandae quod,
+        aliquam aut voluptas unde laboriosam, sint qui iste? Beatae veniam nostrum fugit fugiat totam debitis minima!
+        Voluptas, commodi ipsa! Et rerum iusto eligendi repudiandae aut, enim asperiores architecto voluptate
+        voluptatum, eum reiciendis voluptas quod! Repellat, temporibus sunt. Deleniti nam explicabo consequuntur
+        repellendus numquam et iure a!</p>
+    <script>
+        let para = document.getElementById("mypara");
+        para.addEventListener("click", () => {
+            para.style.color = "red";
+        })
+    </script>
+</body>
+
+</html>
