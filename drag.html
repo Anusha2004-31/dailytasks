@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drag</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+        }
+
+        #box {
+            height: 300px;
+            width: 600px;
+            background-color: palevioletred;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <img id="box" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vbE6O27KMekexBLwX6LRSiKb75pN9lPiTQ&s"
+        draggable="true">DRAG ME</div>
+    <span id="count">0</span>
+
+
+
+    <script>
+        let box = document.getElementById("box");
+        let drag = document.getElementById("count");
+        let count = 0;
+        box.addEventListener("drag", () => {
+            count++;
+            drag.textContent = count;
+        })
+    </script>
+
+
+
+
+
+</body>
+
+</html>
