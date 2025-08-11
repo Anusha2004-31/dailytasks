@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 300px;
+
+
+
+        }
+
+        #box {
+            color: gray;
+            border: 10px solid black;
+            transition: border-color 0.3s ease;
+            padding: 50px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="box">
+    <script>
+        let boxe = document.getElementById("box");
+        boxe.addEventListener("focus", () => {
+            boxe.style.borderColor = "red";
+        })
+        boxe.addEventListener("blur", () => {
+            boxe.style.borderColor = "green";
+        })
+    </script>
+</body>
+
+</html>
