@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day1</title>
+</head>
+
+<body>
+    <script>
+        //syncrnous
+        console.log("task1");
+        console.log("task2");
+        console.log("task3");
+        console.log("task4");
+
+        //asyncrous
+        function task1() {
+            console.log("task1 delivery order placed");
+        }
+        function task2() {
+            setTimeout(() => {
+                console.log("task2 delivery is being prepared");
+
+            }, 1000)
+
+        }
+        function task3() {
+            console.log("task3  order delivered");
+        }
+
+        task1();
+        task2();
+        task3();
+
+        //promises
+
+        let p = new Promise((resolve, reject) => {
+            task1();
+            setTimeout(() => {
+                console.log("task2 delivery is being prepared");
+                resolve();
+            }, 1000);
+        })
+        p.then(() => {
+            task3();
+        });
+
+
+        let p1 = new Promise((resolve, reject) => {
+            task1();
+
+            setTimeout(() => {
+                console.log("task2 delivery is being prepared");
+                reject("Task2 failed");
+            }, 1000);
+        });
+
+        p1.catch((error) => {
+            console.log("Error:", error);
+            task3();
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
