@@ -4,72 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>button</title>
+    <title>30day</title>
 </head>
 
 <body>
-    <button>button</button>
-    <button>button</button>
-    <button>button</button>
-
     <script>
-        let buttons = document.querySelectorAll("button");
-        buttons.forEach((v, i) => {
-            v.addEventListener("click", () => {
-                alert(`button ${i + 1} clicked`);
-            });
-        });  
-    </script>
+        let name = "hello World"
+        console.log(name.toUpperCase());
+        console.log(name.toLowerCase())
+
+        let name1 = "javascript"
+        console.log(name.slice(4, 10));
+        console.log(name.substring(4, 10));
+        console.log(name.substr(4, 6));
+
+        let name3 = 'JavaScript is fun'
+        console.log(name.includes("fun"));
+
+        function countVowels(str) {
+            let count = 0;
+            for (let ch of str) {
+                if ("aeiouAEIOU".includes(ch)) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        console.log(countVowels("JavaScript")); // 3
+
+        let name6 = "anusha thotapali";
+        console.log(name.split('').reverse().join(''))
+
+        let name5 = ["anusha", "anu", "ammu"]
+        name.push("chinnu")
+        console.log(name);
+        name.pop();
+        console.log(name);
+        name.shift()
+        console.log(name);
+        name.unshift("raji");
+        console.log(name);
+
+        let fruits = ["mango", "banana", "apple"]
+        console.log(fruits.includes("mango"));
+        console.log(fruits.indexOf("banana"));
+
+        let numb = [70, 20, 80, 40, 60]
+        console.log(numb.sort());
+        console.log(numb.reverse());
+        let name8 = ["anusha", "thotaplli"]
+        console.log(name8.join(""));
+        let num = ["10", "20", "30", "40"]
+        console.log(num.splice(2, 2, 100, 200));
+        console.log(num);
+
+        //map
+        let products = [
+            { name: "ammayi", age: "21", color: "black" },
+            { name: "anuuuu", age: "20", color: "red" },
+            { name: "anu", age: "23", color: "pink" },
+            { name: "anushanu", age: "22", color: "white" },
+            { name: "anu", age: "28", color: "black" },
+        ]
+        console.log(products);
+        let name0 = products.map(v => { return v.name })
+
+        console.log(name0);
+        // //filter
+
+
+        let products1 = [
+            { name: "ammayi", age: "21", color: "black", score: "200" },
+            { name: "anuuuu", age: "20", color: "red", score: "900" },
+            { name: "anu", age: "23", color: "pink", score: "300" },
+            { name: "anushanu", age: "22", color: "white", score: "700" },
+            { name: "anu", age: "28", color: "black", score: "800" },
+        ]
+        console.log(products1);
+        let name99 = products1.filter(v => { return v.score > 300 })
+
+        console.log(name99);
+
+
+        let number1 = ["50", "70", "90", "60"]
+        let number = num.reduce((acc, val, index, array) => {
+            console.log("acc", acc);
+            console.log("val", val);
+            return acc + val;
+        }, 0)
+        console.log(number);
+
+        let num1 = ["30", "50", "70", "60"]
+        let result = num.find(v => Number(v) > 60);
+        console.log(result);
 
 
 
-</body>
-
-</html>
 
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task</title>
-</head>
-<style>
-    img {
-        height: 300px;
-        width: 300px;
-    }
-</style>
-
-<body>
-    <div id="root"></div>
-    <div class="elemnt"></div>
 
 
-    <script>
-        let figure = document.createElement("figure");
-        console.log(figure);
-        figure.setAttribute("class", "value");
-        figure.setAttribute("id", "myfigure");
 
-        let img = document.createElement("img");
-        console.log(img);
 
-        img.setAttribute("src", "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg");
-        img.setAttribute("alt", "Road between trees");
 
-        let caption = document.createElement("figcaption");
-        console.log(caption);
-        caption.innerHTML = "<h1>This is a sample figure </h1>";
 
-        figure.appendChild(img);
-        figure.appendChild(caption);
 
-        document.getElementById("root").appendChild(figure);
+
+
 
 
     </script>
