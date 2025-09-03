@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day29</title>
+</head>
+<style>
+    p {
+        background-color: yellow;
+
+    }
+
+    #heading {
+        color: red;
+        cursor: pointer
+    }
+
+    #image {
+        cursor: blue;
+    }
+
+    .dark {
+        background: blue;
+        color: white;
+    }
+
+    button {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <!-- : DOM Selectors & Events(By Thursday -29/5/2025)
+• - Change <h1 id='title'>Welcome</h1> text to 'Hello Students' using getElementById.
+• - Highlight all <p> tags using getElementsByTagName (set background yellow).
+• - Add numbering to multiple <p> tags using querySelectorAll and forEach.
+• - Validate <input type='email'> → If missing '@', show red border.
+• - On hover, change <h2 id='heading'>Hello</h2> to 'Welcome!'.
+• - Image hover effect → Change image source on mouseenter/mouseleave.
+• - Prevent default form submission and show alert with input value.
+• - Counter App → Buttons to increase/decrease number displayed. -->
+    <!-- • - Toggle Dark/Light mode using classList.toggle.
+    Write 2 examples on map, reduce ,filter, each, for-in, for-of along with real time example. -->
+
+    <h1 id="title">Welcome</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, architecto accusamus, quibusdam ipsum nemo
+        inventore neque veritatis deserunt dignissimos cupiditate saepe, illum veniam sed? Quod ullam unde dolor
+        mollitia autem.
+        Quidem natus ad obcaecati facere, dicta commodi porro perspiciatis fugit consequatur dolorem numquam maxime
+        tenetur quod iusto pariatur vel vitae explicabo saepe deserunt iure nostrum? Voluptatibus aperiam eum dolorum
+        quos.
+        Totam obcaecati exercitationem blanditiis facilis inventore, eos consequatur fugit ut possimus corporis illo
+        sunt, quisquam perferendis dignissimos dolorem adipisci deleniti. Veritatis repellat totam, quas dolores
+        similique officiis distinctio molestiae incidunt?
+        Velit repudiandae perspiciatis consequatur ullam laborum ratione debitis quis, atque sint libero commodi,
+        assumenda, distinctio voluptates quaerat porro reiciendis itaque consequuntur aliquam recusandae necessitatibus?
+        Omnis placeat doloremque necessitatibus exercitationem fuga!
+        Ex tempora reiciendis at. Provident beatae rem totam dolorem velit ducimus! Sint vero rerum sequi, magni optio
+        doloribus fugit dignissimos, eligendi doloremque nihil maxime illo quis delectus dolore ducimus quisquam?</p>
+    <p>anusha</p>
+    <p>anu</p>
+    <p>ammu</p>
+    <p>fairoz</p>
+    <input id="mail" type="anushathotapalli16@gmail.com" placeholder="Enter email">
+    <h2 id='heading'>Hello</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vbE6O27KMekexBLwX6LRSiKb75pN9lPiTQ&s" id="image"
+        alt="image">
+    <form id="form"></form>
+    username:
+    <input type="text" name="fulltname" id="fname"><br><br>
+
+    <button type="button">button</button>
+    <h1>couterApp</h1>
+    <button id="btn">toggle mode</button>
+
+
+
+    <script>
+        document.getElementById("title").innerText = "Hello Students"
+        document.getElementsByTagName("p")
+        let para = document.querySelectorAll("p")
+        for (i = 0; i < para.length; i++) { para[i].innerText = (i + 1) + ". " + para[i].innerText; } let
+            mail = document.getElementById("mail");
+        mail.oninput = function () {
+            if (!mail.value.includes("@")) {
+                mail.style.border = "30px solid red";
+
+            }
+        }; let dom = document.getElementById("heading")
+        dom.addEventListener("click", () => {
+            dom.innerText = "Welcome"
+
+
+        })
+        let img = document.getElementById("image");
+        img.addEventListener("mouseenter", () => {
+            img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vbE6O27KMekexBLwX6LRSiKb75pN9lPiTQ&s";
+
+        });
+        img.addEventListener("mouseleave", () => {
+            img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHMRjeBMVn72iXhhW3cgorzataTa9UYPBkEg&s";
+        })
+
+        let input = document.getElementById("fname");
+        input.addEventListener("click", (event) => {
+            event.preventDefault();
+            alert("entered:" + "anushathotapalli");
+
+
+        })
+        let count = 0;
+        let num = document.createElement("h3")
+        num.innerText = count;
+        let increase = document.createElement("button")
+        increase.innerText = "+";
+        increase.onclick = () => num.innerText = ++count;
+        let decrease = document.createElement("button")
+        decrease.innerText = "-";
+        decrease.onclick = () => num.innerText = --count;
+        document.body.append(num, increase, decrease);
+
+        document.getElementById("btn").onclick = () => {
+            document.body.classList.toggle("dark");
+
+        }
+
+
+        // map real time example
+
+        let products = [
+            { name: 'anusha ', color: 'black', phone: 'samsung', id: '200' },
+            { name: 'anu ', color: 'black', phone: 'samsung', id: '400' },
+            { name: 'ammu ', color: 'black', phone: 'samsung', id: '500' },
+            { name: 'anitha ', color: 'black', phone: 'samsung', id: '600' },
+            { name: 'raji', color: 'black', phone: 'samsung', id: '900' },
+        ]
+        console.log(products)
+        let name1 = products.map(v => { return v.name })
+        console.log(name);
+        let products3 = [
+            { name: 'anusha ', color: 'black', phone: 'samsung', id: '200' },
+            { name: 'anu ', color: 'black', phone: 'realme', id: '400' },
+            { name: 'ammu ', color: 'black', phone: 'nokia', id: '500' },
+            { name: 'anitha ', color: 'black', phone: 'readme', id: '600' },
+            { name: 'raji', color: 'black', phone: 'apple', id: '900' },
+        ]
+        console.log(products3)
+        let name = products3.map(v => { return v.phone })
+        console.log(name);
+
+        //filter real time example
+        let products1 = [
+            { name: 'apple ', color: 'red', price: '300' },
+            { name: 'mango ', color: 'yellow', price: '200' },
+            { name: 'guva', color: 'green', price: '350' },
+            { name: 'pinaapple ', color: 'pink', price: '250' },
+            { name: 'banana', color: 'black', price: '500' },
+        ]
+        console.log(products1);
+        let name2 = products1.filter(v => { return v.price > 250 })
+        console.log(name1);
+
+        let products2 = [
+            { name: 'anu ', color: 'red', price: '30000' },
+            { name: 'anitha ', color: 'yellow', price: '20000' },
+            { name: 'anusha', color: 'green', price: '35000' },
+            { name: 'ammu', color: 'pink', price: '25000' },
+            { name: 'annnnn', color: 'black', price: '50000' },
+        ]
+        console.log(products2);
+        let name3 = products2.filter(v => { return v.price > 250000 })
+        console.log(name1);
+
+
+        //    reduce realtime examples
+
+        let num = [30, 70, 30, 40, 60]
+        let number = num.reduce((acc, val, inde, array) => {
+            console.log("acc", acc);
+            console.log("val", val);
+            return acc + val;
+        },)
+        console.log(number);
+
+        let no = [30, 70, 30, 40, 60]
+        let number1 = no.reduce((acc, val, inde, array) => {
+            console.log("acc", acc);
+            console.log("val", val);
+            return acc + val;
+        }, [])
+        console.log(number1);
+
+        //for of and for in//
+        let array = ["anusha", "anu", "ammu"];
+        console.log(array);
+
+        for (let x of array) {
+            console.log(x);
+
+        }
+        let num = ["20", "30", "70", "90"];
+        console.log(num);
+        for (let z of num) {
+            console.log(z);
+
+        }
+
+
+        let products5 = ["fridge", "cooler", "ac", "mirror"];
+        console.log(products5);
+        for (let x in products5) {
+            console.log(x);
+
+        }
+
+
+        let fruits = ["grapes", "apple", "mango", "jam"]
+        console.log(fruits);
+        for (let y in fruits) {
+            console.log(y);
+
+        }
+
+
+        // foreach//
+        let names = ["anusha", "raji", "akka", "mummy", "daddy"]
+        console.log(names);
+
+        names.forEach((v, i, a) => {
+            console.log(i);
+        })
+
+        let animals = ["tiger", "cat", "dog", "loin"]
+        console.log(animals);
+        animals.forEach((v, i, a) => {
+            console.log(a);
+
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
