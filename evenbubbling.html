@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubbling</title>
+</head>
+<style>
+    div {
+        border: 2px solid orange;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="gp">grandfather
+        <div id="pare">parent
+            <div id="child">child
+
+            </div>
+            <script>
+                document.getElementById("gp").addEventListener('click', () => {
+
+                    alert("grandfather clicked");
+                }, true)
+                document.getElementById("pare").addEventListener('click', () => {
+
+                    alert("parent clicked");
+                }, true)
+                document.getElementById("child").addEventListener('click', (event) => {
+
+                    alert("child clicked");
+                }, false)
+
+            </script>
+</body>
+
+</html>
